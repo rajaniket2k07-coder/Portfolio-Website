@@ -1,0 +1,919 @@
+/* =========================================================
+   1. FIRST PAGE COLOR PALETTE (Scoped to #home-page)
+   ========================================================= */
+#home-page {
+	--sky-blue: #bedeff; /* Top swatch: Soft Sky Blue */
+	--pastel-yellow: #fff2a7; /* Second swatch: Warm Pastel Yellow */
+	--vibrant-orange: #ffa500; /* Third swatch: Vibrant Orange */
+	--deep-burgundy: #930031; /* Bottom swatch: Deep Burgundy */
+	--surface-white: #ffffff;
+	--text-dark: #2a1119; /* Dark burgundy-charcoal for high contrast text */
+}
+
+/* =========================================================
+   2. ELEMENT SELECTORS (Base Reset, Fonts & Media)
+   ========================================================= */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body#home-page {
+	font-family: "Plus Jakarta Sans", sans-serif;
+	background-color: #f4f9ff; /* Ultra-light tint of #BEDEFF for easy reading */
+	color: var(--text-dark);
+	line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Playfair Display", serif;
+	color: var(--deep-burgundy);
+	line-height: 1.25;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: all 0.25s ease;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+footer {
+	text-align: center;
+	padding: 2.5rem 1rem;
+	margin-top: 4.5rem;
+	background-color: var(--deep-burgundy);
+	color: var(--pastel-yellow);
+	font-weight: 500;
+}
+
+/* =========================================================
+   3. ID SELECTORS (Page Structure & Positioning)
+   ========================================================= */
+#main-nav {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: var(--deep-burgundy);
+	border-bottom: 4px solid var(--vibrant-orange);
+	box-shadow: 0 4px 12px rgba(147, 0, 49, 0.15);
+}
+
+#hero-section {
+	background: linear-gradient(
+		135deg,
+		var(--sky-blue) 0%,
+		var(--pastel-yellow) 100%
+	);
+	padding: 4.5rem 1.5rem;
+	border-bottom: 3px solid var(--vibrant-orange);
+}
+
+#about-story {
+	background-color: var(--pastel-yellow);
+	padding: 2.5rem;
+	border-radius: 16px;
+	border: 2px solid var(--vibrant-orange);
+	box-shadow: 0 10px 25px rgba(147, 0, 49, 0.08);
+	margin-top: 3rem;
+}
+
+/* =========================================================
+   4. CLASS SELECTORS (Flexbox, Grid, Cards & Images)
+   ========================================================= */
+.container {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+/* Navbar Flexbox */
+.nav-container {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 1rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-family: "Playfair Display", serif;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: var(--pastel-yellow);
+}
+
+.logo span {
+	color: var(--vibrant-orange);
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: #ffffff;
+	font-weight: 500;
+	padding-bottom: 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+	color: var(--pastel-yellow);
+	border-bottom: 2px solid var(--vibrant-orange);
+}
+
+/* Hero Section Flexbox */
+.hero-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+}
+
+.hero-text {
+	flex: 1.2;
+}
+
+.hero-text h1 {
+	font-size: 2.75rem;
+	margin: 1rem 0;
+	color: var(--deep-burgundy);
+}
+
+.hero-subtitle {
+	font-size: 1.15rem;
+	margin-bottom: 2rem;
+	color: var(--text-dark);
+}
+
+.hero-image-box {
+	flex: 0.8;
+	display: flex;
+	justify-content: center;
+}
+
+.profile-pic {
+	width: 280px;
+	height: 280px;
+	border-radius: 50%;
+	border: 6px solid var(--deep-burgundy);
+	box-shadow: 10px 10px 0px var(--vibrant-orange);
+}
+
+/* Buttons */
+.hero-buttons {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.8rem 1.6rem;
+	border-radius: 8px;
+	font-weight: 700;
+	font-size: 0.95rem;
+}
+
+.btn-primary {
+	background-color: var(--deep-burgundy);
+	color: var(--pastel-yellow);
+	border: 2px solid var(--deep-burgundy);
+}
+
+.btn-primary:hover {
+	background-color: var(--vibrant-orange);
+	color: var(--deep-burgundy);
+	border-color: var(--vibrant-orange);
+	transform: translateY(-2px);
+}
+
+.btn-outline {
+	background-color: transparent;
+	color: var(--deep-burgundy);
+	border: 2px solid var(--deep-burgundy);
+}
+
+.btn-outline:hover {
+	background-color: var(--deep-burgundy);
+	color: #ffffff;
+}
+
+/* Story Section Grid */
+.story-grid {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 2.5rem;
+	align-items: center;
+}
+
+.story-image img {
+	width: 100%;
+	height: 340px;
+	border-radius: 12px;
+	border: 4px solid var(--deep-burgundy);
+}
+
+.story-content h2 {
+	font-size: 2rem;
+	margin: 0.6rem 0 1rem 0;
+}
+
+/* Feature Cards & CSS Grid */
+.section-block {
+	margin-top: 4rem;
+}
+
+.section-title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+	gap: 2rem;
+}
+
+.card {
+	background-color: var(--surface-white);
+	border-radius: 14px;
+	overflow: hidden;
+	border: 2px solid var(--sky-blue);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+	transition:
+		transform 0.25s ease,
+		border-color 0.25s ease;
+}
+
+.card:hover {
+	transform: translateY(-6px);
+	border-color: var(--vibrant-orange);
+}
+
+.card-img {
+	width: 100%;
+	height: 200px;
+	border-bottom: 3px solid var(--vibrant-orange);
+}
+
+.card-body {
+	padding: 1.5rem;
+}
+
+.card-body h3 {
+	font-size: 1.3rem;
+	margin: 0.6rem 0;
+}
+
+/* Reusable Pill Badge */
+.badge {
+	display: inline-block;
+	background-color: var(--vibrant-orange);
+	color: var(--deep-burgundy);
+	font-size: 0.78rem;
+	font-weight: 700;
+	padding: 0.3rem 0.85rem;
+	border-radius: 999px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+/* Responsive Media Query for Mobile Screens */
+@media (max-width: 768px) {
+	.hero-wrapper {
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+	.hero-buttons {
+		justify-content: center;
+	}
+	.story-grid {
+		grid-template-columns: 1fr;
+	}
+	.nav-container {
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+}
+
+/* =========================================================
+   PAGE 2: ACADEMICS & SKILLS PALETTE (Scoped to #resume-page)
+   Palette: #F6E2E9 (Blush), #FEFAF3 (Cream), #B8CFB3 (Light Sage), #84A282 (Deep Sage)
+   ========================================================= */
+#resume-page {
+	--blush-pink: #f6e2e9;
+	--warm-cream: #fefaf3;
+	--light-sage: #b8cfb3;
+	--deep-sage: #84a282;
+	--forest-ink: #233322; /* Deep forest green-charcoal for crisp readability */
+	--muted-sage: #4a6148;
+	background-color: var(--warm-cream);
+	color: var(--forest-ink);
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#resume-page h1,
+#resume-page h2,
+#resume-page h3 {
+	font-family: "Playfair Display", serif;
+	color: var(--forest-ink);
+}
+
+/* Page 2 Navbar Override */
+#resume-page #main-nav {
+	background-color: var(--forest-ink);
+	border-bottom: 4px solid var(--light-sage);
+	box-shadow: 0 4px 15px rgba(35, 51, 34, 0.12);
+}
+
+#resume-page .logo {
+	color: var(--blush-pink);
+}
+
+#resume-page .logo span {
+	color: var(--light-sage);
+}
+
+#resume-page .nav-links a {
+	color: var(--warm-cream);
+}
+
+#resume-page .nav-links a:hover,
+#resume-page .nav-links a.active {
+	color: var(--blush-pink);
+	border-bottom: 2px solid var(--light-sage);
+}
+
+/* Page 2 Hero Section */
+#resume-hero {
+	background: linear-gradient(
+		135deg,
+		var(--blush-pink) 0%,
+		var(--warm-cream) 55%,
+		var(--light-sage) 100%
+	);
+	padding: 4.5rem 1.5rem;
+	border-bottom: 2px solid var(--deep-sage);
+}
+
+.resume-hero-grid {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 3rem;
+	align-items: center;
+}
+
+.resume-hero-text h1 {
+	font-size: 2.7rem;
+	margin: 1rem 0;
+}
+
+.resume-hero-text p {
+	font-size: 1.15rem;
+	color: var(--muted-sage);
+}
+
+.resume-hero-img {
+	width: 100%;
+	height: 300px;
+	border-radius: 18px;
+	border: 5px solid var(--warm-cream);
+	box-shadow: 12px 12px 0px var(--deep-sage);
+}
+
+/* Reusable Sage Badge */
+.sage-badge {
+	display: inline-block;
+	background-color: var(--deep-sage);
+	color: var(--warm-cream);
+	font-size: 0.78rem;
+	font-weight: 700;
+	padding: 0.35rem 0.9rem;
+	border-radius: 999px;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+}
+
+.section-header {
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+
+#resume-page .section-title {
+	margin-top: 0.6rem;
+	margin-bottom: 0;
+}
+
+/* Dual Degree Grid Cards */
+.degree-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 2.2rem;
+}
+
+.degree-card {
+	background-color: #ffffff;
+	border-radius: 18px;
+	overflow: hidden;
+	border: 2px solid var(--light-sage);
+	box-shadow: 0 8px 24px rgba(132, 162, 130, 0.14);
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.degree-card:hover {
+	transform: translateY(-6px);
+	border-color: var(--deep-sage);
+}
+
+.degree-img-box {
+	position: relative;
+	height: 220px;
+}
+
+.degree-img-box img {
+	width: 100%;
+	height: 100%;
+	border-bottom: 3px solid var(--blush-pink);
+}
+
+.floating-tag {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	background-color: var(--blush-pink);
+	color: var(--forest-ink);
+	font-weight: 700;
+	font-size: 0.78rem;
+	padding: 0.3rem 0.8rem;
+	border-radius: 999px;
+	border: 1px solid var(--deep-sage);
+}
+
+.degree-content {
+	padding: 1.8rem;
+}
+
+.university-name {
+	color: var(--deep-sage);
+	font-weight: 700;
+	font-size: 0.92rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.3rem;
+}
+
+.degree-content h3 {
+	font-size: 1.45rem;
+	margin-bottom: 0.4rem;
+}
+
+.school-dept {
+	font-style: italic;
+	color: var(--muted-sage);
+	font-size: 0.95rem;
+	margin-bottom: 1rem;
+}
+
+/* Workshop Spotlight Feature Box */
+#workshop-spotlight {
+	margin-top: 4rem;
+	background-color: var(--blush-pink);
+	border: 2px solid var(--light-sage);
+	border-radius: 20px;
+	padding: 2.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1.3fr;
+	gap: 2.5rem;
+	align-items: center;
+}
+
+.workshop-img img {
+	width: 100%;
+	height: 270px;
+	border-radius: 14px;
+	border: 4px solid var(--warm-cream);
+	box-shadow: 8px 8px 0px var(--deep-sage);
+}
+
+.workshop-text h2 {
+	font-size: 1.9rem;
+	margin: 0.6rem 0;
+}
+
+.workshop-text h3 {
+	font-size: 1.25rem;
+	margin-bottom: 0.3rem;
+}
+
+/* Skills Bento Grid */
+.skills-bento {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.skill-box {
+	background-color: var(--light-sage);
+	padding: 2rem;
+	border-radius: 16px;
+	border: 2px solid var(--deep-sage);
+}
+
+.skill-box h3 {
+	font-size: 1.4rem;
+	margin-bottom: 1.2rem;
+}
+
+.skill-pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.pill {
+	background-color: var(--warm-cream);
+	color: var(--forest-ink);
+	padding: 0.55rem 1.1rem;
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	border: 1px solid var(--deep-sage);
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.pill:hover {
+	background-color: var(--blush-pink);
+	transform: translateY(-2px);
+}
+
+/* Page 2 Footer */
+#resume-page footer {
+	background-color: var(--forest-ink);
+	color: var(--blush-pink);
+}
+
+/* Responsive Adjustments for Page 2 */
+@media (max-width: 768px) {
+	.resume-hero-grid,
+	#workshop-spotlight {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* =========================================================
+   PAGE 3: INTERESTS, ESSAY & CONTACT PALETTE (Scoped to #projects-page)
+   Palette: #9FA0FF (Periwinkle), #D5E8E6 (Soft Mint), #FFF3E3 (Warm Cream), #FF7171 (Vibrant Coral)
+   ========================================================= */
+#projects-page {
+	--periwinkle: #9fa0ff;
+	--soft-mint: #d5e8e6;
+	--warm-cream: #fff3e3;
+	--vibrant-coral: #ff7171;
+	--deep-indigo: #1e1b4b; /* Crisp dark indigo for high-contrast reading */
+	--muted-indigo: #4338ca;
+	background-color: var(--warm-cream);
+	color: var(--deep-indigo);
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#projects-page h1,
+#projects-page h2,
+#projects-page h3 {
+	font-family: "Playfair Display", serif;
+	color: var(--deep-indigo);
+}
+
+/* Page 3 Navbar Override */
+#projects-page #main-nav {
+	background-color: var(--deep-indigo);
+	border-bottom: 4px solid var(--vibrant-coral);
+	box-shadow: 0 4px 15px rgba(30, 27, 75, 0.15);
+}
+
+#projects-page .logo {
+	color: var(--warm-cream);
+}
+
+#projects-page .logo span {
+	color: var(--vibrant-coral);
+}
+
+#projects-page .nav-links a {
+	color: var(--soft-mint);
+}
+
+#projects-page .nav-links a:hover,
+#projects-page .nav-links a.active {
+	color: var(--vibrant-coral);
+	border-bottom: 2px solid var(--periwinkle);
+}
+
+/* Page 3 Hero Banner */
+#interests-hero {
+	background: linear-gradient(
+		135deg,
+		var(--periwinkle) 0%,
+		var(--soft-mint) 60%,
+		var(--warm-cream) 100%
+	);
+	padding: 4.5rem 1.5rem;
+	border-bottom: 3px solid var(--vibrant-coral);
+}
+
+.interests-hero-grid {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 3rem;
+	align-items: center;
+}
+
+.interests-hero-text h1 {
+	font-size: 2.8rem;
+	margin: 1rem 0;
+}
+
+.interests-hero-text p {
+	font-size: 1.15rem;
+	margin-bottom: 2rem;
+	color: var(--deep-indigo);
+}
+
+.interests-hero-img {
+	width: 100%;
+	height: 310px;
+	border-radius: 18px;
+	border: 5px solid var(--warm-cream);
+	box-shadow: 12px 12px 0px var(--vibrant-coral);
+}
+
+/* Page 3 Badges & Buttons */
+.coral-badge {
+	display: inline-block;
+	background-color: var(--vibrant-coral);
+	color: #ffffff;
+	font-size: 0.78rem;
+	font-weight: 700;
+	padding: 0.35rem 0.95rem;
+	border-radius: 999px;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+}
+
+.btn-coral {
+	background-color: var(--vibrant-coral);
+	color: #ffffff;
+	border: 2px solid var(--vibrant-coral);
+}
+
+.btn-coral:hover {
+	background-color: var(--deep-indigo);
+	border-color: var(--deep-indigo);
+	color: var(--warm-cream);
+	transform: translateY(-2px);
+}
+
+.btn-indigo-outline {
+	background-color: transparent;
+	color: var(--deep-indigo);
+	border: 2px solid var(--deep-indigo);
+}
+
+.btn-indigo-outline:hover {
+	background-color: var(--deep-indigo);
+	color: var(--warm-cream);
+}
+
+.btn-light-outline {
+	background-color: transparent;
+	color: var(--warm-cream);
+	border: 2px solid var(--soft-mint);
+}
+
+.btn-light-outline:hover {
+	background-color: var(--soft-mint);
+	color: var(--deep-indigo);
+}
+
+/* 4-Card Passions Grid (Instruments, 40-Book Shelf, F1, Football) */
+.passions-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2.2rem;
+}
+
+.passion-card {
+	background-color: #ffffff;
+	border-radius: 18px;
+	overflow: hidden;
+	border: 2px solid var(--periwinkle);
+	box-shadow: 0 8px 20px rgba(159, 160, 255, 0.18);
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.passion-card:hover {
+	transform: translateY(-6px);
+	border-color: var(--vibrant-coral);
+}
+
+/* Aesthetic Photo Frame for Real/Candid Photos (40-Book Library & Instruments) */
+.passion-img-frame {
+	position: relative;
+	height: 230px;
+	background-color: var(--soft-mint);
+	padding: 10px;
+	border-bottom: 3px solid var(--periwinkle);
+}
+
+.passion-img-frame img {
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	object-fit: cover;
+	filter: contrast(1.04) saturate(1.06); /* Enhances real phone photos */
+}
+
+.photo-caption-tag {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: var(--deep-indigo);
+	color: var(--warm-cream);
+	font-size: 0.76rem;
+	font-weight: 700;
+	padding: 0.35rem 0.85rem;
+	border-radius: 999px;
+	border: 2px solid var(--vibrant-coral);
+}
+
+.passion-card-body {
+	padding: 1.75rem;
+}
+
+.mint-pill {
+	display: inline-block;
+	background-color: var(--soft-mint);
+	color: var(--deep-indigo);
+	font-size: 0.76rem;
+	font-weight: 700;
+	padding: 0.25rem 0.75rem;
+	border-radius: 6px;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+
+.passion-card-body h3 {
+	font-size: 1.35rem;
+	margin-bottom: 0.6rem;
+}
+
+.mini-tag-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.mini-tag-row span {
+	background-color: var(--warm-cream);
+	border: 1px solid var(--periwinkle);
+	color: var(--deep-indigo);
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 0.25rem 0.7rem;
+	border-radius: 999px;
+}
+
+/* Editorial Essay Showcase ("Speed, Stories and Sound") */
+.essay-wrapper {
+	margin-top: 4.5rem;
+	background-color: #ffffff;
+	border-radius: 22px;
+	border: 3px solid var(--periwinkle);
+	box-shadow: 12px 12px 0px var(--soft-mint);
+	padding: 3.5rem 3rem;
+}
+
+.essay-header {
+	text-align: center;
+	border-bottom: 2px dashed var(--periwinkle);
+	padding-bottom: 2rem;
+	margin-bottom: 2.5rem;
+}
+
+.essay-header h2 {
+	font-size: 2.5rem;
+	margin: 0.75rem 0 0.4rem 0;
+}
+
+.essay-byline {
+	color: var(--muted-indigo);
+	font-weight: 600;
+	font-size: 0.95rem;
+	margin-bottom: 0;
+}
+
+.essay-body {
+	max-width: 780px;
+	margin: 0 auto;
+	font-size: 1.06rem;
+	line-height: 1.85;
+}
+
+.essay-lead {
+	font-size: 1.15rem;
+	font-weight: 500;
+	background-color: var(--warm-cream);
+	padding: 1.5rem;
+	border-radius: 12px;
+	border-left: 5px solid var(--vibrant-coral);
+	margin-bottom: 2rem;
+}
+
+.essay-chapter {
+	font-size: 1.45rem;
+	margin: 2.2rem 0 0.8rem 0;
+	padding-bottom: 0.4rem;
+	border-bottom: 2px solid var(--soft-mint);
+	color: var(--deep-indigo);
+}
+
+.essay-quote {
+	margin: 2.2rem 0;
+	padding: 1.75rem 2rem;
+	background: linear-gradient(
+		135deg,
+		var(--soft-mint) 0%,
+		var(--warm-cream) 100%
+	);
+	border-left: 6px solid var(--periwinkle);
+	border-radius: 14px;
+	font-family: "Playfair Display", serif;
+	font-style: italic;
+	font-size: 1.25rem;
+	color: var(--deep-indigo);
+}
+
+/* Contact Hub at Bottom of Page 3 */
+#contact-hub {
+	margin-top: 4.5rem;
+	background-color: var(--deep-indigo);
+	color: var(--warm-cream);
+	text-align: center;
+	padding: 3.5rem 2rem;
+	border-radius: 20px;
+	border: 3px solid var(--periwinkle);
+}
+
+#contact-hub h2 {
+	color: var(--warm-cream);
+	font-size: 2rem;
+	margin: 0.8rem 0;
+}
+
+#contact-hub p {
+	max-width: 620px;
+	margin: 0 auto 2rem auto;
+	color: var(--soft-mint);
+}
+
+#projects-page footer {
+	background-color: var(--deep-indigo);
+	color: var(--soft-mint);
+}
+
+/* Responsive Adjustments for Page 3 */
+@media (max-width: 768px) {
+	.interests-hero-grid {
+		grid-template-columns: 1fr;
+	}
+	.essay-wrapper {
+		padding: 2rem 1.4rem;
+	}
+	.essay-header h2 {
+		font-size: 1.9rem;
+	}
+}

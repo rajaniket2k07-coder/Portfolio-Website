@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aniket Raj | Who Am I</title>
+		<!-- Google Fonts: Playfair Display (Headings) & Plus Jakarta Sans (Body) -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body id="home-page">
+		<!-- ID Selector (#main-nav) + Sticky Positioning -->
+		<header id="main-nav">
+			<div class="nav-container">
+				<a href="index.html" class="logo">Aniket<span>.</span></a>
+				<nav>
+					<ul class="nav-links">
+						<li>
+							<a href="index.html" class="active">Who Am I</a>
+						</li>
+						<li><a href="resume.html">Academics & Skills</a></li>
+						<li><a href="projects.html">Interests & Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- ID Selector (#hero-section) with Two-Column Flexbox & Profile Image -->
+		<section id="hero-section">
+			<div class="container hero-wrapper">
+				<div class="hero-text">
+					<span class="badge">Student • Reader • Vocalist</span>
+					<h1>Bonjour & Namaste, I'm Aniket Raj.</h1>
+					<p class="hero-subtitle">
+						Exploring French language and culture, digital business,
+						while finding joy in books and singing.
+					</p>
+					<div class="hero-buttons">
+						<a href="#about-story" class="btn btn-primary"
+							>Read My Story</a
+						>
+						<a href="resume.html" class="btn btn-outline"
+							>View My Resume</a
+						>
+					</div>
+				</div>
+
+				<!-- Hero Portrait Image (Replace src with your own photo, e.g., "my-photo.jpg") -->
+				<div class="hero-image-box">
+					<img
+						src="./Aniket Image center.jpeg"
+						alt="Aniket Raj Portrait"
+						class="profile-pic"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main Content Container -->
+		<main class="container">
+			<!-- ID Selector (#about-story) with Side-by-Side Image & Text -->
+			<section id="about-story" class="story-grid">
+				<div class="story-image">
+					<!-- Replace src with a photo of your hometown, campus, or yourself -->
+					<img src="./mp.jpeg" alt="Books and Study" />
+				</div>
+				<div class="story-content">
+					<span class="badge">My Journey</span>
+					<h2>Who Am I & Where I Hail From</h2>
+					<p>
+						I hail from <strong>Hajipur, Bihar</strong>—a city rich
+						in history, warmth, and cultural heritage—and I am
+						currently based in <strong>New Delhi</strong>. Growing
+						up, I was always fascinated by how stories, languages,
+						and technology bring people together across different
+						corners of the world.
+					</p>
+					<p>
+						That curiosity led me to pursue a multidisciplinary
+						academic life. Today, I study <strong>French</strong> at
+						<strong>Jawaharlal Nehru University (JNU)</strong>,
+						explore digital entrepreneurship and web development
+						through <strong>IIM Bangalore</strong>.
+					</p>
+					<p>
+						Beyond lectures and coding assignments, I am an avid
+						reader who loves getting lost in a good book, and I
+						enjoy singing whenever I want to unwind and express
+						myself creatively.
+					</p>
+				</div>
+			</section>
+
+			<!-- Feature Cards with Images Using CSS Grid -->
+			<section class="section-block">
+				<h2 class="section-title">My World in Three Frames</h2>
+				<div class="card-grid">
+					<!-- Card 1 -->
+					<article class="card">
+						<img
+							src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+							alt="French Studies and Roots"
+							class="card-img"
+						/>
+						<div class="card-body">
+							<span class="badge">Roots & Language</span>
+							<h3>From Patna to Paris (via JNU)</h3>
+							<p>
+								Carrying my roots from Bihar to New Delhi while
+								immersing myself in French language, phonetics,
+								and global perspectives at JNU.
+							</p>
+						</div>
+					</article>
+
+					<!-- Card 2 -->
+					<article class="card">
+						<img
+							src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+							alt="Reading Books"
+							class="card-img"
+						/>
+						<div class="card-body">
+							<span class="badge">Literature</span>
+							<h3>A Love for Reading</h3>
+							<p>
+								Whether it is fiction, philosophy, or
+								biographies, reading books keeps my imagination
+								sharp and broadens how I think about the world.
+							</p>
+						</div>
+					</article>
+
+					<!-- Card 3 -->
+					<article class="card">
+						<img
+							src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80"
+							alt="Singing and Music"
+							class="card-img"
+						/>
+						<div class="card-body">
+							<span class="badge">Music & Voice</span>
+							<h3>Singing & Melody</h3>
+							<p>
+								Music is my favorite creative escape. Singing
+								helps me recharge after busy days of studying
+								digital business and languages.
+							</p>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2026 Aniket Raj. Crafted with HTML5 & CSS3.</p>
+		</footer>
+	</body>
+</html>
