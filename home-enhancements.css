@@ -1,0 +1,112 @@
+/* Extra presentation for the new home-page ticker, polaroid and highlights. */
+.ticker-wrap {
+	overflow: hidden;
+	padding: 0.9rem 0;
+	background: var(--deep-burgundy);
+	color: var(--pastel-yellow);
+	border-bottom: 3px solid var(--vibrant-orange);
+}
+
+.ticker-track,
+.ticker-group {
+	display: flex;
+	width: max-content;
+	align-items: center;
+}
+
+.ticker-track {
+	animation: home-ticker-scroll 42s linear infinite;
+}
+
+.ticker-wrap:hover .ticker-track,
+.ticker-wrap:focus-within .ticker-track {
+	animation-play-state: paused;
+}
+
+.ticker-group {
+	gap: 2rem;
+	padding-right: 2rem;
+}
+
+.ticker-group span {
+	white-space: nowrap;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+}
+
+@keyframes home-ticker-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.story-image.polaroid-frame {
+	padding: 0.8rem 0.8rem 0;
+	background: #fff;
+	border: 1px solid rgba(147, 0, 49, 0.15);
+	box-shadow: 0 10px 24px rgba(42, 17, 25, 0.14);
+	transform: rotate(-2deg);
+}
+
+.story-image.polaroid-frame img {
+	width: 100%;
+	height: 300px;
+	border: 0;
+	border-radius: 4px;
+}
+
+.polaroid-caption {
+	margin: 0;
+	padding: 0.8rem 0.25rem 1rem;
+	color: var(--deep-burgundy);
+	font-family: "Playfair Display", serif;
+	font-style: italic;
+	text-align: center;
+}
+
+.story-highlights {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+.mini-stat {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	padding: 0.8rem 0.9rem;
+	background: rgba(255, 255, 255, 0.72);
+	border: 1px solid var(--vibrant-orange);
+	border-radius: 10px;
+}
+
+.mini-stat strong {
+	color: var(--deep-burgundy);
+	font-size: 0.88rem;
+}
+
+.mini-stat span {
+	font-size: 0.76rem;
+}
+
+@media (max-width: 768px) {
+	.story-image.polaroid-frame {
+		max-width: 440px;
+		margin: 0 auto;
+	}
+
+	.story-image.polaroid-frame img {
+		height: 280px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ticker-track {
+		animation: none;
+	}
+}
