@@ -9,100 +9,166 @@
 			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<!-- Links to the EXACT SAME style.css file -->
 		<link rel="stylesheet" href="style.css" />
-
-		<!-- Built-in Timeline & Credential Styling for Page 2 -->
 		<style>
-			.timeline-intro {
-				max-width: 720px;
-				margin: 0.75rem auto 0 auto;
+			/* More intentional spacing between the resume page sections */
+			#resume-page main.container > .section-block {
+				margin-block: clamp(3.5rem, 7vw, 6rem);
+			}
+
+			/* A compact, editorial-style timeline */
+			.resume-story .section-header {
+				max-width: 760px;
+				margin-inline: auto;
+				text-align: center;
+			}
+
+			.resume-story .section-title {
+				margin-bottom: 0.6rem;
+				font-size: clamp(2rem, 4vw, 3rem);
+				line-height: 1.12;
+				letter-spacing: -0.035em;
+			}
+
+			.story-intro {
+				max-width: 620px;
+				margin: 0.75rem auto 0;
 				color: var(--muted-sage, #4a6148);
-				font-size: 1.05rem;
+				font-size: clamp(1rem, 1.5vw, 1.1rem);
+				line-height: 1.75;
 			}
-			.timeline-wrapper {
+
+			.story-timeline {
 				position: relative;
-				max-width: 860px;
-				margin: 2.5rem auto 0 auto;
-				padding-left: 2.2rem;
-				border-left: 4px solid var(--deep-sage, #84A282);
+				max-width: 800px;
+				margin: clamp(2rem, 4vw, 3rem) auto 0;
+				padding-left: 1.7rem;
 			}
-			.timeline-item {
+
+			.story-timeline::before {
+				position: absolute;
+				top: 0.65rem;
+				bottom: 0.65rem;
+				left: 0.35rem;
+				width: 2px;
+				background: var(--light-sage, #b8cfb3);
+				content: "";
+			}
+
+			.story-card {
 				position: relative;
-				background-color: #ffffff;
-				border: 2px solid var(--light-sage, #B8CFB3);
-				border-radius: 16px;
-				padding: 1.6rem 1.8rem;
-				margin-bottom: 1.8rem;
-				box-shadow: 0 6px 18px rgba(132, 162, 130, 0.12);
-				transition: transform 0.25s ease, border-color 0.25s ease;
+				margin-bottom: 1rem;
+				padding: 1.25rem clamp(1.1rem, 3vw, 1.65rem);
+				border: 1px solid rgba(132, 162, 130, 0.3);
+				border-radius: 14px;
+				background: rgba(255, 255, 255, 0.82);
+				box-shadow: 0 8px 24px rgba(35, 51, 34, 0.045);
+				transition:
+					transform 180ms ease,
+					border-color 180ms ease,
+					box-shadow 180ms ease;
 			}
-			.timeline-item:last-child {
+
+			.story-card:last-child {
 				margin-bottom: 0;
 			}
-			.timeline-item:hover {
-				transform: translateX(6px);
-				border-color: var(--deep-sage, #84A282);
+
+			.story-card:hover {
+				transform: translateY(-2px);
+				border-color: var(--deep-sage, #84a282);
+				box-shadow: 0 12px 30px rgba(35, 51, 34, 0.08);
 			}
-			.timeline-item.highlight-pivot {
-				background-color: var(--blush-pink, #F6E2E9);
-				border-color: var(--deep-sage, #84A282);
-			}
-			.timeline-dot {
+
+			.story-card::before {
 				position: absolute;
-				left: -2.95rem;
-				top: 1.8rem;
-				width: 20px;
-				height: 20px;
+				top: 1.5rem;
+				left: -1.83rem;
+				width: 0.72rem;
+				height: 0.72rem;
+				border: 3px solid var(--warm-cream, #fefaF3);
 				border-radius: 50%;
-				background-color: var(--blush-pink, #F6E2E9);
-				border: 4px solid var(--forest-ink, #233322);
+				background: var(--deep-sage, #84a282);
+				box-shadow: 0 0 0 1px var(--deep-sage, #84a282);
+				content: "";
 			}
-			.timeline-meta {
+
+			.story-card--pivot {
+				border-color: rgba(132, 162, 130, 0.55);
+				background: var(--blush-pink, #f6e2e9);
+			}
+
+			.story-meta {
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-				justify-content: space-between;
-				gap: 0.6rem;
-				margin-bottom: 0.5rem;
+				gap: 0.55rem 0.8rem;
+				margin-bottom: 0.55rem;
 			}
-			.timeline-year {
-				display: inline-block;
-				background-color: var(--light-sage, #B8CFB3);
-				color: var(--forest-ink, #233322);
+
+			.story-year {
+				color: var(--deep-sage, #587454);
+				font-size: 0.75rem;
 				font-weight: 700;
-				font-size: 0.78rem;
-				padding: 0.25rem 0.8rem;
-				border-radius: 999px;
+				letter-spacing: 0.08em;
 				text-transform: uppercase;
-				letter-spacing: 0.6px;
 			}
-			.timeline-score {
-				display: inline-block;
-				background-color: var(--forest-ink, #233322);
-				color: var(--warm-cream, #FEFAF3);
-				font-weight: 700;
-				font-size: 0.8rem;
-				padding: 0.25rem 0.8rem;
+
+			.story-credential {
+				padding: 0.2rem 0.65rem;
 				border-radius: 999px;
-			}
-			.timeline-item h3 {
-				font-size: 1.35rem;
-				margin-bottom: 0.25rem;
-			}
-			.timeline-school {
-				color: var(--deep-sage, #84A282);
+				background: rgba(35, 51, 34, 0.08);
+				color: var(--forest-ink, #233322);
+				font-size: 0.75rem;
 				font-weight: 700;
-				font-size: 0.92rem;
-				margin-bottom: 0.65rem;
 			}
-			.timeline-item p:last-child {
+
+			.story-card h3 {
+				margin: 0 0 0.25rem;
+				font-size: clamp(1.1rem, 2vw, 1.3rem);
+				line-height: 1.35;
+				letter-spacing: -0.015em;
+			}
+
+			.story-school {
+				margin: 0 0 0.55rem;
+				color: var(--deep-sage, #587454);
+				font-size: 0.9rem;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+
+			.story-card > p:last-child {
 				margin-bottom: 0;
+				line-height: 1.7;
+			}
+
+			@media (max-width: 600px) {
+				.story-timeline {
+					margin-top: 1.75rem;
+					padding-left: 1.35rem;
+				}
+
+				.story-card::before {
+					left: -1.49rem;
+				}
+
+				.story-card {
+					padding: 1.1rem;
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.story-card {
+					transition: none;
+				}
+
+				.story-card:hover {
+					transform: none;
+				}
 			}
 		</style>
 	</head>
 	<body id="resume-page">
-		<!-- Sticky Navigation Bar -->
 		<header id="main-nav">
 			<div class="nav-container">
 				<a href="index.html" class="logo">Aniket<span>.</span></a>
@@ -110,9 +176,7 @@
 					<ul class="nav-links">
 						<li><a href="index.html">Who Am I</a></li>
 						<li>
-							<a href="resume.html" class="active"
-								>Academics & Skills</a
-							>
+							<a href="resume.html" class="active">Academics & Skills</a>
 						</li>
 						<li><a href="projects.html">Interests & Contact</a></li>
 					</ul>
@@ -120,19 +184,18 @@
 			</div>
 		</header>
 
-		<!-- Page 2 Hero Banner -->
 		<section id="resume-hero">
 			<div class="container resume-hero-grid">
 				<div class="resume-hero-text">
 					<span class="sage-badge">Education, Pivot & Craft</span>
 					<h1>Where Language Meets Digital Innovation.</h1>
 					<p>
-						After completing my schooling in Pure Sciences (PCB) and earning a 6-year classical music degree, I took a bold pivot into what truly excites me—combining French Studies at
-						<strong>JNU</strong> with Digital Business &amp; Entrepreneurship at <strong>IIM Bangalore</strong>.
+						My path has taken me from science classrooms and years of
+						classical music training to French Studies at
+						<strong>JNU</strong> and Digital Business &amp; Entrepreneurship
+						at <strong>IIM Bangalore</strong>.
 					</p>
 				</div>
-
-				<!-- Your Exact Campus / Study Portrait Preserved -->
 				<div class="resume-hero-img-wrapper">
 					<img
 						src="./study.jpg"
@@ -144,49 +207,34 @@
 		</section>
 
 		<main class="container">
-			<!-- Dual Degree Showcase (Your 2 Image Cards Preserved) -->
 			<section class="section-block">
 				<div class="section-header">
 					<span class="sage-badge">Current Undergraduate Programs</span>
 					<h2 class="section-title">My Dual-Campus Journey</h2>
 				</div>
-
 				<div class="degree-grid">
-					<!-- University Card 1: JNU (French) -->
 					<article class="degree-card">
 						<div class="degree-img-box">
-							<!-- Your Exact JNU Image Preserved -->
-							<img
-								src="./SL.png"
-								alt="Jawaharlal Nehru University Campus"
-							/>
+							<img src="./SL.png" alt="Jawaharlal Nehru University Campus" />
 							<span class="floating-tag">New Delhi</span>
 						</div>
 						<div class="degree-content">
-							<p class="university-name">
-								Jawaharlal Nehru University (JNU)
-							</p>
+							<p class="university-name">Jawaharlal Nehru University (JNU)</p>
 							<h3>B.A. (Hons.) in French Studies</h3>
 							<p class="school-dept">
-								School of Language, Literature &amp; Culture Studies
-								(SLL&amp;CS)
+								School of Language, Literature &amp; Culture Studies (SLL&amp;CS)
 							</p>
 							<p>
 								Immersing myself in French language acquisition,
-								corrective phonetics, Francophone culture, and
-								literary traditions on campus in New Delhi.
+								corrective phonetics, Francophone culture, and literary
+								traditions on campus in New Delhi.
 							</p>
 						</div>
 					</article>
 
-					<!-- University Card 2: IIM Bangalore -->
 					<article class="degree-card">
 						<div class="degree-img-box">
-							<!-- Your Exact IIM Bangalore Image Preserved -->
-							<img
-								src="./DBE.png"
-								alt="IIM Bangalore Digital Business"
-							/>
+							<img src="./DBE.png" alt="IIM Bangalore Digital Business" />
 							<span class="floating-tag">Digital Program</span>
 						</div>
 						<div class="degree-content">
@@ -194,9 +242,7 @@
 								Indian Institute of Management Bangalore (IIMB)
 							</p>
 							<h3>BBA in Digital Business &amp; Entrepreneurship</h3>
-							<p class="school-dept">
-								Undergraduate Digital Business Program
-							</p>
+							<p class="school-dept">Undergraduate Digital Business Program</p>
 							<p>
 								Building a strong foundation in web development
 								(HTML5 &amp; CSS3), digital business models, startup
@@ -207,108 +253,94 @@
 				</div>
 			</section>
 
-			<!-- =======================================================
-			     NEW: ACADEMIC & MUSICAL TIMELINE SECTION
-			     ======================================================= -->
-			<section class="section-block">
+			<section class="section-block resume-story">
 				<div class="section-header">
-					<span class="sage-badge">Milestones & Turning Points</span>
-					<h2 class="section-title">The Unconventional Path Here</h2>
-					<p class="timeline-intro">
-						How I moved from CBSE Science classrooms and classical music exams in Bihar to languages and digital entrepreneurship in New Delhi.
+					<span class="sage-badge">Milestones &amp; Turning Points</span>
+					<h2 class="section-title">A Path That Found Its Own Direction</h2>
+					<p class="story-intro">
+						Science, music, a change of plans, and the curiosity to build a
+						different future—all part of the journey that brought me here.
 					</p>
 				</div>
 
-				<div class="timeline-wrapper">
-					<!-- Milestone 1: Class 10th (2023) -->
-					<article class="timeline-item">
-						<span class="timeline-dot"></span>
-						<div class="timeline-meta">
-							<span class="timeline-year">2023 • Secondary School (CBSE)</span>
-							<span class="timeline-score">Score: 90.2%</span>
+				<div class="story-timeline">
+					<article class="story-card">
+						<div class="story-meta">
+							<span class="story-year">2023 · Secondary school</span>
+							<span class="story-credential">90.2% · CBSE</span>
 						</div>
-						<h3>Class X Board Examination</h3>
-						<p class="timeline-school">
-							Indian Public School, Hajipur (Vaishali, Bihar)
-						</p>
+						<h3>A strong start in science</h3>
+						<p class="story-school">Indian Public School, Hajipur, Bihar</p>
 						<p>
-							Completed my secondary schooling with a 90.2% aggregate under the CBSE board while balancing academics with evening training in Indian classical vocals and the tabla (2021–2023).
+							I completed Class X while continuing evening training in
+							classical vocals and tabla.
 						</p>
 					</article>
 
-					<!-- Milestone 2: Sangeet Prabhakar (2024) -->
-					<article class="timeline-item">
-						<span class="timeline-dot"></span>
-						<div class="timeline-meta">
-							<span class="timeline-year">2024 • Classical Music Credential</span>
-							<span class="timeline-score">6-Year Senior Diploma</span>
+					<article class="story-card">
+						<div class="story-meta">
+							<span class="story-year">2024 · Music</span>
+							<span class="story-credential">Sangeet Prabhakar</span>
 						</div>
-						<h3>Sangeet Prabhakar in Vocal Music</h3>
-						<p class="timeline-school">
-							Prayag Sangeet Samiti, Prayagraj (coupled with 1.5–2 years of Tabla)
-						</p>
+						<h3>Six years of classical music study</h3>
+						<p class="story-school">Prayag Sangeet Samiti, Prayagraj</p>
 						<p>
-							Completed my 6th-year <em>Sangeet Prabhakar</em> degree in Hindustani Classical Vocal Music along with formal training on the harmonium and tabla. Although I stepped away from formal classical practice afterward, those six years permanently shaped how I listen to and feel music.
+							I completed the vocal music diploma after years of training
+							in Hindustani classical music, with additional experience
+							in harmonium and tabla.
 						</p>
 					</article>
 
-					<!-- Milestone 3: Class 12th PCB (2025) -->
-					<article class="timeline-item">
-						<span class="timeline-dot"></span>
-						<div class="timeline-meta">
-							<span class="timeline-year">2025 • Senior Secondary (CBSE — PCB)</span>
-							<span class="timeline-score">Score: 81.4%</span>
+					<article class="story-card">
+						<div class="story-meta">
+							<span class="story-year">2025 · Senior secondary</span>
+							<span class="story-credential">81.4% · PCB</span>
 						</div>
-						<h3>Class XII in Pure Sciences (Physics, Chemistry, Biology)</h3>
-						<p class="timeline-school">
-							St. Michael's School, Budh Vihar, Lalganj (Bihar)
-						</p>
+						<h3>Completing Class XII in science</h3>
+						<p class="story-school">St. Michael's School, Lalganj, Bihar</p>
 						<p>
-							Graduated Class 12th in the PCB stream with 81.4%. Like many science students, my initial trajectory pointed toward medical entrance exams, setting up the most important turning point of my academic life.
+							Physics, Chemistry, and Biology gave me an analytical
+							foundation—and initially pointed me toward medical studies.
 						</p>
 					</article>
 
-					<!-- Milestone 4: The NEET Drop Year & Self-Taught Ukulele (2025–2026) -->
-					<article class="timeline-item highlight-pivot">
-						<span class="timeline-dot"></span>
-						<div class="timeline-meta">
-							<span class="timeline-year">2025 – 2026 • The Turning Point</span>
-							<span class="timeline-score">Self-Discovery &amp; Ukulele</span>
+					<article class="story-card story-card--pivot">
+						<div class="story-meta">
+							<span class="story-year">2025–2026 · A change in direction</span>
+							<span class="story-credential">NEET preparation</span>
 						</div>
-						<h3>The NEET Drop Year &amp; Teaching Myself the Ukulele</h3>
-						<p class="timeline-school">
-							Realizing What Was Truly Meant for Me
-						</p>
+						<h3>Making room for a better-fitting path</h3>
+						<p class="story-school">A year of reflection and self-discovery</p>
 						<p>
-							I took a drop year to prepare for NEET, and it was an honest wake-up call: I realized that the medical track simply wasn't meant for me or where my natural strengths lived. During that intense year, as an escape mechanism after long study sessions, I picked up a <strong>ukulele</strong> and taught myself to play completely by ear—no YouTube tutorials or formal guides, just figuring out chords and melodies on my own. That year gave me the clarity to let go of a path that didn't fit and build one that did.
+							Preparing for NEET helped me recognize that medicine wasn’t
+							the right fit for me. In that period, I also taught myself
+							ukulele by ear—a small creative outlet that reminded me to
+							follow my curiosity.
 						</p>
 					</article>
 
-					<!-- Milestone 5: Current Dual Degrees (2026–Present) -->
-					<article class="timeline-item">
-						<span class="timeline-dot"></span>
-						<div class="timeline-meta">
-							<span class="timeline-year">2026 – Present • Dual Undergraduate Track</span>
-							<span class="timeline-score">JNU + IIM Bangalore</span>
+					<article class="story-card">
+						<div class="story-meta">
+							<span class="story-year">2026–present · Undergraduate study</span>
+							<span class="story-credential">JNU + IIM Bangalore</span>
 						</div>
-						<h3>Pivoting to Languages, Culture &amp; Digital Business</h3>
-						<p class="timeline-school">
-							Jawaharlal Nehru University (New Delhi) &amp; IIM Bangalore
-						</p>
+						<h3>Bringing language and digital business together</h3>
+						<p class="story-school">New Delhi &amp; IIM Bangalore</p>
 						<p>
-							Channeling both my analytical background and creative curiosity into two complementary degrees: <strong>B.A. (Hons.) in French Studies at JNU</strong> and <strong>BBA in Digital Business &amp; Entrepreneurship at IIM Bangalore</strong>—while occasionally learning a few new tunes on the harmonica.
+							I’m now pursuing French Studies at JNU alongside Digital
+							Business &amp; Entrepreneurship at IIM Bangalore, combining
+							cultural and creative interests with a practical, analytical
+							outlook.
 						</p>
 					</article>
 				</div>
 			</section>
 
-			<!-- Skills Bento Section -->
 			<section class="section-block">
 				<div class="section-header">
 					<span class="sage-badge">Capabilities</span>
 					<h2 class="section-title">Skills &amp; Toolkit</h2>
 				</div>
-
 				<div class="skills-bento">
 					<div class="skill-box">
 						<h3>Web, Tech &amp; Analytical</h3>
@@ -321,7 +353,6 @@
 							<span class="pill">Science &amp; Analytical Foundation (PCB)</span>
 						</div>
 					</div>
-
 					<div class="skill-box">
 						<h3>Languages, Business &amp; Music</h3>
 						<div class="skill-pills">
