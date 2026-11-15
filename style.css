@@ -1,4 +1,152 @@
 /* =========================================================
+   SHARED LAYOUT FOUNDATION
+   Restore the structural rules used by all pages; keep page colors
+   and visual refinements scoped to their respective page IDs below.
+   ========================================================= */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+.container {
+	width: min(100% - 3rem, 1050px);
+	margin-inline: auto;
+}
+
+#main-nav {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.nav-container {
+	width: min(100% - 3rem, 1050px);
+	margin-inline: auto;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.hero-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+}
+
+.hero-text {
+	flex: 1.2;
+	min-width: 0;
+}
+
+.hero-image-box {
+	flex: 0.8;
+	display: flex;
+	justify-content: center;
+}
+
+.hero-buttons {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.8rem 1.35rem;
+	border-radius: 8px;
+	font-weight: 700;
+	font-size: 0.95rem;
+	text-align: center;
+}
+
+.story-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+	gap: 2.5rem;
+	align-items: center;
+}
+
+.section-block {
+	margin-top: 4rem;
+}
+
+.section-title {
+	text-align: center;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+	gap: 2rem;
+}
+
+.card {
+	min-width: 0;
+	transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card-body {
+	padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.nav-container {
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.nav-links {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 0.65rem 1.25rem;
+	}
+
+	.hero-wrapper {
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+
+	.hero-buttons {
+		justify-content: center;
+	}
+
+	.story-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* =========================================================
    1. HOME PAGE COLOR PALETTE (Scoped to #home-page)
    Palette tuned to match the refreshed page 2 editorial look.
    ========================================================= */
@@ -14,9 +162,6 @@
 	--text-dark: var(--forest-ink);
 }
 
-/* =========================================================
-   2. ELEMENT SELECTORS (Base Reset, Fonts & Media)
-   ========================================================= */
 body#home-page {
 	font-family: "Plus Jakarta Sans", sans-serif;
 	background-color: var(--warm-cream);
@@ -42,9 +187,6 @@ body#home-page {
 	border-top: 2px solid var(--accent-brass);
 }
 
-/* =========================================================
-   3. HOME PAGE STRUCTURE OVERRIDES
-   ========================================================= */
 #home-page #main-nav {
 	background-color: var(--forest-ink);
 	border-bottom: 2px solid var(--accent-brass);
