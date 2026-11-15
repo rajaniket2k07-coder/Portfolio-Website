@@ -6,19 +6,21 @@
 		<title>Aniket Raj | Who Am I</title>
 		<!-- Google Fonts: Playfair Display (Headings) & Plus Jakarta Sans (Body) -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="home-enhancements.css" />
 	</head>
 	<body id="home-page">
+		<!-- ID Selector (#main-nav) + Sticky Positioning -->
 		<header id="main-nav">
 			<div class="nav-container">
 				<a href="index.html" class="logo">Aniket<span>.</span></a>
 				<nav>
 					<ul class="nav-links">
-						<li><a href="index.html" class="active">Who Am I</a></li>
+						<li>
+							<a href="index.html" class="active">Who Am I</a>
+						</li>
 						<li><a href="resume.html">Academics & Skills</a></li>
 						<li><a href="projects.html">Interests & Contact</a></li>
 					</ul>
@@ -26,23 +28,22 @@
 			</div>
 		</header>
 
+		<!-- ID Selector (#hero-section) with Two-Column Flexbox & Profile Image -->
 		<section id="hero-section">
 			<div class="container hero-wrapper">
 				<div class="hero-text">
-					<span class="badge">Hajipur • New Delhi • Dual-Degree Student</span>
+					<span class="badge">Hajipur Roots • New Delhi Life • Curious Mind</span>
 					<h1>Bonjour & Namaste, I'm Aniket Raj.</h1>
 					<p class="hero-subtitle">
-						A former pure-science student who traded equations for French Studies at
-						<strong>JNU</strong> and Digital Business at <strong>IIM Bangalore</strong>—
-						grounded by a 6-year classical vocal degree, four instruments, great books,
-						and Formula 1 weekends.
+						Someone shaped by stories, languages, and old-school melodies—finding meaning in good books, casual music, and high-speed race weekends.
 					</p>
 					<div class="hero-buttons">
 						<a href="#about-story" class="btn btn-primary">Read My Story</a>
-						<a href="resume.html" class="btn btn-outline">View My Academics</a>
+						<a href="resume.html" class="btn btn-outline">Explore My Academics</a>
 					</div>
 				</div>
 
+				<!-- Your Exact Hero Portrait Image Preserved -->
 				<div class="hero-image-box">
 					<img
 						src="./Aniket Image center.jpeg"
@@ -53,124 +54,105 @@
 			</div>
 		</section>
 
-		<div class="ticker-wrap" aria-label="Aniket's background and interests">
-			<div class="ticker-track">
-				<div class="ticker-group">
-					<span>✦ HAILING FROM HAJIPUR, BIHAR</span>
-					<span>✦ BASED IN NEW DELHI</span>
-					<span>✦ PURE SCIENCES TO CREATIVE DUAL DEGREES</span>
-					<span>✦ B.A. (HONS.) FRENCH @ JNU</span>
-					<span>✦ BBA DIGITAL BUSINESS @ IIM BANGALORE</span>
-					<span>✦ 6-YR VOCAL DEGREE — PRAYAG SANGEET SAMITI</span>
-					<span>✦ HARMONIUM • TABLA • UKULELE • HARMONICA</span>
-				</div>
-				<div class="ticker-group" aria-hidden="true">
-					<span>✦ HAILING FROM HAJIPUR, BIHAR</span>
-					<span>✦ BASED IN NEW DELHI</span>
-					<span>✦ PURE SCIENCES TO CREATIVE DUAL DEGREES</span>
-					<span>✦ B.A. (HONS.) FRENCH @ JNU</span>
-					<span>✦ BBA DIGITAL BUSINESS @ IIM BANGALORE</span>
-					<span>✦ 6-YR VOCAL DEGREE — PRAYAG SANGEET SAMITI</span>
-					<span>✦ HARMONIUM • TABLA • UKULELE • HARMONICA</span>
-				</div>
-			</div>
-		</div>
-
+		<!-- Main Content Container -->
 		<main class="container">
+			<!-- ID Selector (#about-story) with Side-by-Side Image & Text -->
 			<section id="about-story" class="story-grid">
-				<div class="story-image polaroid-frame">
-					<img src="./mp.jpeg" alt="Aniket's Journey" />
-					<p class="polaroid-caption">From Hajipur roots to New Delhi campus life ✨</p>
+				<div class="story-image">
+					<!-- Your Exact Story Image Preserved -->
+					<img src="./mp.jpeg" alt="Aniket Raj" />
 				</div>
 				<div class="story-content">
-					<span class="badge">Who Am I & Where I Hail From</span>
-					<h2>From Pure Sciences to Languages, Business & Melody</h2>
+					<span class="badge">My Journey</span>
+					<h2>Who Am I & Where I Hail From</h2>
 					<p>
-						I hail from <strong>Hajipur, Bihar</strong>—a town rich in warmth,
-						resilience, and cultural heritage—and I am currently based in
-						<strong>New Delhi</strong>. Up until Class 12th, I was on the traditional
-						<strong>Pure Sciences</strong> track. While science trained me to think
-						analytically, I realized that I didn't want to spend my life inside a
-						single conventional box—I wanted to explore languages, human stories,
-						music, and digital innovation.
+						I hail from <strong>Hajipur, Bihar</strong>—a town rich
+						in history, warmth, and grounded values—and I am
+						currently based in <strong>New Delhi</strong>. For most
+						of my school years, I was trained to look at the world
+						through a rigid, analytical lens. Over time, however, I
+						realized that what truly excites me isn't staying inside
+						a single predictable track—it is exploring how languages,
+						cultures, human stories, and digital ideas connect
+						people across the world.
 					</p>
 					<p>
-						So I made a bold pivot into a creative dual-degree life. Today, I pursue
-						my <strong>B.A. (Hons.) in French</strong> on campus at
-						<strong>Jawaharlal Nehru University (JNU)</strong> while simultaneously
-						studying for a <strong>BBA in Digital Business & Entrepreneurship</strong>
-						from <strong>IIM Bangalore</strong>.
+						Music has been with me through almost every phase of
+						that journey. Growing up, I spent years learning Indian
+						classical vocals, the harmonium, and the tabla. Even
+						though I stepped away from formal classical practice a
+						few years ago, that early bond with music never faded—now
+						it simply means singing for my own peace of mind or
+						picking up my self-taught ukulele whenever I want to
+						unwind.
 					</p>
 					<p>
-						Long before college, music was my first true discipline. I hold a
-						<strong>6-year degree in Vocal Music from Prayag Sangeet Samiti</strong>,
-						trained on the <strong>harmonium</strong> and <strong>tabla</strong>, and
-						later taught myself the <strong>ukulele</strong> and
-						<strong>harmonica</strong>. When I'm not switching between French
-						phonetics and code, you'll find me reading Dostoevsky by my 40-book
-						shelf, watching football, or cheering (and suffering) with
-						<strong>Scuderia Ferrari</strong> in Formula 1.
+						When I am not exploring a new language or building
+						something on my laptop, you will usually find me deep
+						inside a novel from my bookshelf, listening to 70s–90s
+						ghazals and classic rock, watching football, or riding
+						the emotional highs and lows of a Formula 1 weekend.
 					</p>
-
-					<div class="story-highlights" aria-label="Quick highlights">
-						<div class="mini-stat">
-							<strong>Hajipur &rarr; Delhi</strong>
-							<span>Roots & Current Base</span>
-						</div>
-						<div class="mini-stat">
-							<strong>Science &rarr; Dual Degree</strong>
-							<span>JNU + IIM Bangalore</span>
-						</div>
-						<div class="mini-stat">
-							<strong>6-Year Vocal Degree</strong>
-							<span>Prayag Sangeet Samiti</span>
-						</div>
-					</div>
 				</div>
 			</section>
 
+			<!-- Feature Cards with Your Exact Images Preserved -->
 			<section class="section-block">
 				<h2 class="section-title">My World in Three Frames</h2>
 				<div class="card-grid">
+					<!-- Card 1 -->
 					<article class="card">
 						<img
 							src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
-							alt="French Studies and Roots"
+							alt="Roots and Horizons"
 							class="card-img"
 						/>
 						<div class="card-body">
-							<span class="badge">01 • The Big Pivot</span>
-							<h3>From Pure Science to Hajipur–Paris–Bengaluru</h3>
+							<span class="badge">Roots & Perspective</span>
+							<h3>From Hajipur to New Delhi</h3>
 							<p>
-								Stepping off the pure-science path after 12th to combine analytical
-								thinking with French literature at JNU and digital entrepreneurship
-								at IIM Bangalore.
+								Carrying the warmth and resilience of my hometown
+								in Bihar into the fast-paced cultural life of New
+								Delhi, while staying curious about global
+								languages and new horizons.
 							</p>
 						</div>
 					</article>
 
+					<!-- Card 2 -->
 					<article class="card">
-						<img src="./books.webp" alt="Reading Books" class="card-img" />
+						<img
+							src="./books.webp"
+							alt="Reading Books"
+							class="card-img"
+						/>
 						<div class="card-body">
-							<span class="badge">02 • Stories & Speed</span>
-							<h3>Books, Ferrari & Football</h3>
+							<span class="badge">Literature</span>
+							<h3>A Love for Reading</h3>
 							<p>
-								From building my own 40-book library starting with Dostoevsky's
-								<em>White Nights</em> to never missing a Formula 1 Grand Prix or a
-								big football night.
+								From Russian classics like Dostoevsky to
+								philosophical fiction and thrillers, reading
+								gives me access to minds and lives beyond my own
+								and leaves me with better questions.
 							</p>
 						</div>
 					</article>
 
+					<!-- Card 3 -->
 					<article class="card">
-						<img src="./ukulele.jpeg" alt="Singing and Music" class="card-img" />
+						<img
+							src="./ukulele.jpeg"
+							alt="Singing and Music"
+							class="card-img"
+						/>
 						<div class="card-body">
-							<span class="badge">03 • Classical & Acoustic</span>
-							<h3>6-Year Vocalist & Four Instruments</h3>
+							<span class="badge">Music & Voice</span>
+							<h3>Singing & Melody</h3>
 							<p>
-								A 6-year Vocal Music graduate from
-								<strong>Prayag Sangeet Samiti</strong> who loves singing ghazals and
-								classics while playing the harmonium, tabla, ukulele, and harmonica.
+								Shaped by an early foundation in Indian classical
+								music, I now sing and strum my ukulele simply for
+								the comfort of participating in music rather than
+								only hearing it through earphones.
 							</p>
 						</div>
 					</article>
