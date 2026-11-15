@@ -1,0 +1,371 @@
+/* Editorial redesign for the interests page. Scoped to this page so the
+   existing home and academics page palettes remain unchanged. */
+#projects-page {
+  --page-bg: #f7f5ef;
+  --paper: #fffdf9;
+  --paper-muted: #e9e2d5;
+  --sage-light: #dce4de;
+  --sage: #36594f;
+  --ink: #1d2c3a;
+  --muted: #4b5c59;
+  --brass: #96713c;
+  --terracotta: #a95f4a;
+  --white: #fff;
+
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.7;
+}
+
+#projects-page h1,
+#projects-page h2,
+#projects-page h3 {
+  color: var(--ink);
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+}
+
+#projects-page #main-nav {
+  background: var(--ink);
+  border-bottom: 2px solid var(--brass);
+  box-shadow: 0 4px 15px rgba(29, 44, 58, 0.12);
+}
+
+#projects-page .logo {
+  color: var(--paper-muted);
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+#projects-page .logo span { color: var(--sage-light); }
+#projects-page .nav-links a { color: var(--page-bg); font-weight: 500; }
+#projects-page .nav-links a:hover,
+#projects-page .nav-links a.active {
+  color: var(--paper-muted);
+  border-bottom: 2px solid var(--sage-light);
+}
+
+#projects-page #interests-hero {
+  padding: clamp(3rem, 7vw, 4.5rem) 0;
+  background: linear-gradient(120deg, var(--paper-muted), var(--page-bg) 58%, var(--sage-light));
+  border-bottom: 1px solid rgba(29, 44, 58, 0.2);
+}
+
+#projects-page .interests-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3rem);
+}
+
+#projects-page .interests-hero-text { min-width: 0; }
+#projects-page .interests-hero-text h1 {
+  max-width: 650px;
+  margin: 1rem 0;
+  font-size: clamp(2.5rem, 5vw, 3.7rem);
+  letter-spacing: -0.045em;
+}
+
+#projects-page .interests-hero-text p {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+#projects-page .interests-hero-img {
+  width: 100%;
+  height: 310px;
+  border: 5px solid var(--paper);
+  border-radius: 18px;
+  box-shadow: 10px 10px 0 var(--brass);
+}
+
+#projects-page .coral-badge {
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+  color: var(--terracotta);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+#projects-page main.container > .section-block {
+  margin-block: clamp(4rem, 8vw, 6rem);
+}
+
+#projects-page .section-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#projects-page .section-title {
+  margin: 0.6rem 0 0;
+  font-size: clamp(1.9rem, 3.5vw, 2.55rem);
+  letter-spacing: -0.035em;
+}
+
+#projects-page .passions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+#projects-page .passion-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid rgba(29, 44, 58, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(29, 44, 58, 0.07);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+#projects-page .passion-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--sage);
+}
+
+#projects-page .passion-img-frame {
+  position: relative;
+  height: 230px;
+  padding: 10px;
+  background: var(--sage-light);
+  border-bottom: 3px solid var(--brass);
+}
+
+#projects-page .passion-img-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+#projects-page .photo-caption-tag {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  max-width: calc(100% - 40px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+#projects-page .passion-card-body { padding: 1.5rem; }
+
+#projects-page .mint-pill {
+  display: inline-block;
+  padding: 0.28rem 0.72rem;
+  border-radius: 6px;
+  background: var(--sage-light);
+  color: var(--sage);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#projects-page .passion-card-body h3 {
+  margin: 0.7rem 0 0.6rem;
+  font-size: 1.35rem;
+}
+
+#projects-page .mini-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+#projects-page .mini-tag-row span {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(29, 44, 58, 0.2);
+  border-radius: 999px;
+  background: var(--paper-muted);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+#projects-page .essay-wrapper {
+  margin-top: 4.5rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid rgba(29, 44, 58, 0.16);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 10px 10px 0 var(--sage-light);
+  scroll-margin-top: 7rem;
+}
+
+#projects-page .essay-header {
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(150, 113, 60, 0.35);
+  text-align: center;
+}
+
+#projects-page .essay-header h2 {
+  margin: 0.65rem 0 0.4rem;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+#projects-page .essay-byline {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+#projects-page .essay-toc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+#projects-page .essay-toc a {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(54, 89, 79, 0.35);
+  border-radius: 999px;
+  color: var(--sage);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+#projects-page .essay-toc a:hover {
+  background: var(--sage);
+  color: var(--white);
+}
+
+#projects-page .essay-body {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #354653;
+  font-size: 1.04rem;
+  line-height: 1.85;
+}
+
+#projects-page .essay-body p { margin-bottom: 1.2rem; }
+#projects-page .essay-lead {
+  padding: 1.4rem 1.5rem;
+  border-left: 4px solid var(--brass);
+  border-radius: 0 12px 12px 0;
+  background: var(--paper-muted);
+  color: var(--ink);
+  font-size: 1.08rem;
+}
+
+#projects-page .essay-chapter {
+  margin: 2.3rem 0 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(150, 113, 60, 0.35);
+  color: var(--sage);
+  font-size: 1.35rem;
+  scroll-margin-top: 7rem;
+}
+
+#projects-page .essay-quote {
+  margin: 2rem 0;
+  padding: 1.4rem 1.5rem;
+  border-left: 5px solid var(--brass);
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(120deg, var(--sage-light), var(--paper-muted));
+  color: var(--ink);
+  font-family: "Playfair Display", serif;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+#projects-page #contact-hub {
+  margin-top: 4.5rem;
+  padding: 3.25rem 2rem;
+  border: 0;
+  border-top: 3px solid var(--brass);
+  border-radius: 18px;
+  background: var(--ink);
+  color: var(--page-bg);
+  text-align: center;
+}
+
+#projects-page #contact-hub h2 {
+  margin: 0.8rem 0;
+  color: var(--page-bg);
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+#projects-page #contact-hub p {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  color: var(--sage-light);
+}
+
+#projects-page #contact-hub .hero-buttons { justify-content: center; }
+
+#projects-page .btn-coral {
+  border: 2px solid var(--sage);
+  background: var(--sage);
+  color: var(--white);
+}
+
+#projects-page .btn-coral:hover {
+  transform: translateY(-2px);
+  border-color: var(--brass);
+  background: var(--brass);
+  color: var(--white);
+}
+
+#projects-page .btn-indigo-outline {
+  border: 2px solid var(--sage);
+  background: transparent;
+  color: var(--sage);
+}
+
+#projects-page .btn-indigo-outline:hover {
+  background: var(--sage);
+  color: var(--white);
+}
+
+#projects-page .btn-light-outline {
+  border: 2px solid var(--sage-light);
+  background: transparent;
+  color: var(--page-bg);
+}
+
+#projects-page .btn-light-outline:hover {
+  background: var(--sage-light);
+  color: var(--ink);
+}
+
+#projects-page footer {
+  margin-top: 4.5rem;
+  padding: 2.5rem 1rem;
+  border-top: 2px solid var(--brass);
+  background: var(--ink);
+  color: var(--page-bg);
+  text-align: center;
+}
+
+#projects-page footer p { margin: 0; }
+
+@media (max-width: 768px) {
+  #projects-page .interests-hero-grid,
+  #projects-page .passions-grid { grid-template-columns: 1fr; }
+
+  #projects-page .interests-hero-text { text-align: center; }
+  #projects-page .interests-hero-text p { margin-inline: auto; }
+  #projects-page .interests-hero-img { height: min(320px, 65vw); }
+  #projects-page .essay-wrapper { padding: 2rem 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  #projects-page .essay-wrapper { padding: 1.5rem 1rem; }
+  #projects-page #contact-hub { padding: 2.5rem 1.25rem; }
+  #projects-page #contact-hub .hero-buttons { flex-direction: column; align-items: stretch; }
+}

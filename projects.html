@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aniket Raj | Speed, Stories & Sound</title>
+		<title>Aniket Raj | Speed, Stories &amp; Sound</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="projects-editorial.css" />
 	</head>
 	<body id="projects-page">
 		<header id="main-nav">
@@ -17,9 +18,9 @@
 				<nav>
 					<ul class="nav-links">
 						<li><a href="index.html">Who Am I</a></li>
-						<li><a href="resume.html">Academics & Skills</a></li>
+						<li><a href="resume.html">Academics &amp; Skills</a></li>
 						<li>
-							<a href="projects.html" class="active">Interests & Essay</a>
+							<a href="projects.html" class="active">Beyond the Classroom</a>
 						</li>
 					</ul>
 				</nav>
@@ -30,7 +31,7 @@
 			<div class="container interests-hero-grid">
 				<div class="interests-hero-text">
 					<span class="coral-badge">Beyond the Classroom</span>
-					<h1>Speed, Stories &amp; Sound.</h1>
+					<h1>What Keeps Me Curious</h1>
 					<p>
 						A closer look at the worlds that keep me inspired
 						outside lectures—from playing four instruments and
@@ -38,7 +39,7 @@
 						drama of Formula 1 and football.
 					</p>
 					<div class="hero-buttons">
-						<a href="#essay-section" class="btn btn-coral">Read My Personal Essay</a>
+						<a href="#essay-section" class="btn btn-coral">Read My Notes</a>
 						<a href="#contact-hub" class="btn btn-indigo-outline">Connect With Me</a>
 					</div>
 				</div>
@@ -113,10 +114,7 @@
 
 					<article class="passion-card">
 						<div class="passion-img-frame">
-							<img
-								src="./f1.webp"
-								alt="Formula 1 and Scuderia Ferrari"
-							/>
+							<img src="./f1.webp" alt="Formula 1 and Scuderia Ferrari" />
 							<span class="photo-caption-tag">Forza Ferrari 🏎️</span>
 						</div>
 						<div class="passion-card-body">
@@ -140,7 +138,7 @@
 					<article class="passion-card">
 						<div class="passion-img-frame">
 							<img src="./RM.webp" alt="Football Passion" />
-							<span class="photo-caption-tag">Hala Madrid⚽</span>
+							<span class="photo-caption-tag">Hala Madrid ⚽</span>
 						</div>
 						<div class="passion-card-body">
 							<span class="mint-pill">Pitch • Football</span>
@@ -162,11 +160,16 @@
 
 			<section id="essay-section" class="essay-wrapper">
 				<div class="essay-header">
-					<span class="coral-badge">Personal Essay</span>
-					<h2>Speed, Stories and Sound</h2>
+					<span class="coral-badge">Notes from My World</span>
+					<h2>What Keeps Me Curious</h2>
 					<p class="essay-byline">
-						Written by Aniket Raj • On Music, Literature &amp; Formula 1
+						A personal reflection by Aniket Raj • On music, literature &amp; Formula 1
 					</p>
+					<nav class="essay-toc" aria-label="Essay sections">
+						<a href="#sound">Sound</a>
+						<a href="#stories">Stories</a>
+						<a href="#speed">Speed</a>
+					</nav>
 				</div>
 
 				<article class="essay-body">
@@ -182,7 +185,7 @@
 						as a Ferrari supporter, a fair amount of frustration.
 					</p>
 
-					<h3 class="essay-chapter">01 / Sound — Beyond Earphones</h3>
+					<h3 class="essay-chapter" id="sound">01 / Sound — Beyond Earphones</h3>
 					<p>
 						Music has probably played the longest role in my life.
 						Describing my taste is difficult because it has never
@@ -226,7 +229,7 @@
 						me how quickly circumstances can change.”
 					</blockquote>
 
-					<h3 class="essay-chapter">
+					<h3 class="essay-chapter" id="stories">
 						02 / Stories — From White Nights to Crime and Punishment
 					</h3>
 					<p>
@@ -266,7 +269,7 @@
 						questions.
 					</p>
 
-					<h3 class="essay-chapter">
+					<h3 class="essay-chapter" id="speed">
 						03 / Speed — Strategy, Speed &amp; Scuderia Ferrari
 					</h3>
 					<p>
@@ -319,7 +322,7 @@
 				</p>
 				<div class="hero-buttons">
 					<a href="mailto:your.email@example.com" class="btn btn-coral">Send Me an Email</a>
-					<a href="https://github.com/yourusername" target="_blank" class="btn btn-light-outline">View My GitHub</a>
+					<a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="btn btn-light-outline">View My GitHub</a>
 				</div>
 			</section>
 		</main>
