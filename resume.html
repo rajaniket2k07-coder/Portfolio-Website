@@ -3,14 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Aniket Raj | Academics & Skills</title>
+		<title>Aniket Raj | The Practice</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
 		<style>
-			/* Editorial academic palette: parchment, deep ink, moss, and brass. */
 			#resume-page {
 				--blush-pink: #e9e2d5;
 				--warm-cream: #f7f5ef;
@@ -22,28 +21,22 @@
 				background: var(--warm-cream);
 				color: var(--forest-ink);
 			}
-
 			#resume-page h1,
 			#resume-page h2,
 			#resume-page h3 {
 				color: var(--forest-ink);
 			}
-
 			#resume-page main.container > .section-block {
 				margin-block: clamp(4rem, 8vw, 6.25rem);
 			}
-
 			#resume-page .section-header {
 				margin-bottom: clamp(1.6rem, 3vw, 2.25rem);
 			}
-
 			#resume-page .section-title {
 				font-size: clamp(1.9rem, 3.5vw, 2.55rem);
 				line-height: 1.16;
 				letter-spacing: -0.035em;
 			}
-
-			/* Keep section labels quiet; reserve brass for fine details. */
 			#resume-page .sage-badge {
 				padding: 0;
 				background: transparent;
@@ -51,62 +44,44 @@
 				font-size: 0.69rem;
 				letter-spacing: 0.14em;
 			}
-
 			#resume-page #main-nav {
 				border-bottom: 2px solid var(--accent-brass);
 			}
-
 			#resume-page #resume-hero {
 				background: linear-gradient(120deg, #e9e2d5 0%, #f7f5ef 60%, #dce4de 100%);
 				border-bottom: 1px solid rgba(29, 44, 58, 0.28);
 			}
-
 			.resume-hero-text h1 {
 				max-width: 660px;
 				font-size: clamp(2.45rem, 5vw, 3.7rem);
 				line-height: 1.06;
 				letter-spacing: -0.05em;
 			}
-
 			.resume-hero-text p {
 				max-width: 620px;
 				color: var(--muted-sage);
 				line-height: 1.8;
 			}
-
 			.resume-hero-img {
 				border-color: var(--warm-cream);
 				box-shadow: 10px 10px 0 var(--accent-brass);
 			}
-
 			.degree-card {
 				border: 1px solid rgba(29, 44, 58, 0.24);
 				box-shadow: 0 10px 28px rgba(29, 44, 58, 0.07);
 			}
-
-			.degree-card:hover {
-				border-color: var(--deep-sage);
-			}
-
-			.degree-img-box img {
-				border-bottom-color: var(--accent-brass);
-			}
-
+			.degree-card:hover { border-color: var(--deep-sage); }
+			.degree-img-box img { border-bottom-color: var(--accent-brass); }
 			.floating-tag {
 				background: var(--warm-cream);
 				border-color: rgba(29, 44, 58, 0.3);
 			}
-
-			.university-name {
-				color: var(--deep-sage);
-			}
-
+			.university-name { color: var(--deep-sage); }
 			.resume-story .section-header {
 				max-width: 720px;
 				margin-inline: auto;
 				text-align: center;
 			}
-
 			.story-intro {
 				max-width: 610px;
 				margin: 0.85rem auto 0;
@@ -114,15 +89,12 @@
 				font-size: 1rem;
 				line-height: 1.8;
 			}
-
-			/* Archive layout: dates and fine rules, not a stack of promotional cards. */
 			.story-timeline {
 				position: relative;
 				max-width: 850px;
 				margin: clamp(2rem, 4vw, 3rem) auto 0;
 				padding-left: 1.7rem;
 			}
-
 			.story-timeline::before {
 				position: absolute;
 				top: 0.55rem;
@@ -132,7 +104,6 @@
 				background: var(--accent-brass);
 				content: "";
 			}
-
 			.story-card {
 				position: relative;
 				margin: 0;
@@ -143,21 +114,12 @@
 				background: transparent;
 				box-shadow: none;
 			}
-
-			.story-card:first-child {
-				padding-top: 0.25rem;
-			}
-
+			.story-card:first-child { padding-top: 0.25rem; }
 			.story-card:last-child {
 				padding-bottom: 0.25rem;
 				border-bottom: 0;
 			}
-
-			.story-card:hover {
-				transform: none;
-				box-shadow: none;
-			}
-
+			.story-card:hover { transform: none; box-shadow: none; }
 			.story-card::before {
 				position: absolute;
 				top: 1.55rem;
@@ -170,16 +132,8 @@
 				box-shadow: 0 0 0 1px var(--deep-sage);
 				content: "";
 			}
-
-			.story-card:first-child::before {
-				top: 0.5rem;
-			}
-
-			.story-card--pivot {
-				background: transparent;
-				border-color: rgba(29, 44, 58, 0.2);
-			}
-
+			.story-card:first-child::before { top: 0.5rem; }
+			.story-card--pivot { background: transparent; border-color: rgba(29, 44, 58, 0.2); }
 			.story-meta {
 				display: flex;
 				flex-wrap: wrap;
@@ -187,7 +141,6 @@
 				gap: 0.35rem 0.75rem;
 				margin-bottom: 0.35rem;
 			}
-
 			.story-year {
 				color: var(--accent-brass);
 				font-size: 0.7rem;
@@ -195,7 +148,6 @@
 				letter-spacing: 0.1em;
 				text-transform: uppercase;
 			}
-
 			.story-credential {
 				padding: 0;
 				border-radius: 0;
@@ -204,14 +156,12 @@
 				font-size: 0.78rem;
 				font-weight: 600;
 			}
-
 			.story-card h3 {
 				margin: 0 0 0.25rem;
 				font-size: clamp(1.15rem, 2vw, 1.35rem);
 				line-height: 1.35;
 				letter-spacing: -0.02em;
 			}
-
 			.story-school {
 				margin: 0 0 0.45rem;
 				color: var(--deep-sage);
@@ -219,14 +169,12 @@
 				font-weight: 600;
 				line-height: 1.5;
 			}
-
 			.story-card > p:last-child {
 				max-width: 740px;
 				margin-bottom: 0;
 				color: #354653;
 				line-height: 1.75;
 			}
-
 			.story-closing {
 				max-width: 850px;
 				margin: 1.4rem auto 0;
@@ -238,29 +186,15 @@
 				font-style: italic;
 				line-height: 1.6;
 			}
-
 			#resume-page .skill-box {
 				background: #e7e8df;
 				border: 1px solid rgba(29, 44, 58, 0.28);
 			}
-
-			#resume-page .pill {
-				border-color: rgba(29, 44, 58, 0.32);
-			}
-
-			#resume-page footer {
-				border-top: 2px solid var(--accent-brass);
-			}
-
+			#resume-page .pill { border-color: rgba(29, 44, 58, 0.32); }
+			#resume-page footer { border-top: 2px solid var(--accent-brass); }
 			@media (max-width: 600px) {
-				.story-timeline {
-					margin-top: 1.75rem;
-					padding-left: 1.35rem;
-				}
-
-				.story-card::before {
-					left: -1.4rem;
-				}
+				.story-timeline { margin-top: 1.75rem; padding-left: 1.35rem; }
+				.story-card::before { left: -1.4rem; }
 			}
 		</style>
 	</head>
@@ -270,11 +204,9 @@
 				<a href="index.html" class="logo">Aniket<span>.</span></a>
 				<nav>
 					<ul class="nav-links">
-						<li><a href="index.html">Who Am I</a></li>
-						<li>
-							<a href="resume.html" class="active">Academics & Skills</a>
-						</li>
-						<li><a href="projects.html">Passions &amp; Pit Stops</a></li>
+						<li><a href="index.html">The Person</a></li>
+						<li><a href="resume.html" class="active">The Practice</a></li>
+						<li><a href="projects.html">The Pursuits</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -283,7 +215,7 @@
 		<section id="resume-hero">
 			<div class="container resume-hero-grid">
 				<div class="resume-hero-text">
-					<span class="sage-badge">Education · Music · New Directions</span>
+					<span class="sage-badge">The Practice</span>
 					<h1>A life of study, sound, and new directions.</h1>
 					<p>
 						From science classrooms and classical music to French Studies
@@ -460,3 +392,45 @@
 		</footer>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
