@@ -1,7 +1,7 @@
 body#home-page,
 body#resume-page,
 body#projects-page {
-	font-family: "DM Sans", sans-serif;
+	font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
 }
 
 #home-page h1,
@@ -18,13 +18,13 @@ body#projects-page {
 #projects-page h3,
 #projects-page .logo,
 #projects-page .essay-quote {
-	font-family: "DM Serif Display", Georgia, serif;
+	font-family: "Playfair Display", Georgia, serif;
 }
 
 #home-page h1,
 #resume-page h1,
 #projects-page h1 {
-	font-weight: 400;
+	font-weight: 600;
 	letter-spacing: -0.02em;
 }
 
@@ -34,11 +34,11 @@ body#projects-page {
 #resume-page h3,
 #projects-page h2,
 #projects-page h3 {
-	font-weight: 400;
+	font-weight: 600;
 }
 
 #home-page .logo,
 #resume-page .logo,
 #projects-page .logo {
-	font-weight: 400;
+	font-weight: 700;
 }
